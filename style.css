@@ -1,0 +1,230 @@
+:root{
+    /* FontWeight */
+    --fw-500:500;
+    --fw-700:700;
+    --fw-800:800;
+    /* ColorPrimary */
+    --clr-lred:hsl(0, 100%, 67%);
+    --clr-oyell:hsl(39, 100%, 56%);
+    --clr-gteal:hsl(166, 100%, 37%);
+    --clr-cblue:hsl(234, 85%, 45%);
+    /* Gradient */
+    --grd-lblue:hsl(252, 100%, 67%);
+    --grd-rblue:hsl(241, 81%, 54%);
+    /* GradientCircle */
+    --grd-circle-vblue:hsla(256, 72%, 46%, 1);
+    --grd-circle-pblue:hsla(241, 72%, 46%, 0);
+    /* Neutral */
+    --white:hsl(0, 0%, 100%);
+    --Paleblue:hsl(221, 100%, 96%);
+    --llavender:hsl(241, 100%, 89%);
+    --darkblue:hsl(224, 30%, 27%);
+    --grey:#a299f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
+
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+p{
+    font-size: 1.125rem;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== Main ===== */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    flex-direction: column;
+    gap: 3.125rem;
+}
+
+
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 12px 25px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 12px 25px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 12px 25px 5px rgba(0,0,0,0.75);    
+    border-radius: 20px;
+}
+
+/* ===== Result ===== */
+
+.result{
+    flex: 1 1 0;
+    border-radius: 20px;
+    max-width: 300px;
+    height: auto;
+    background: linear-gradient(to top, hsl(241, 86%, 60%), hsl(241, 87%, 64%));
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+    color: var(--white);
+    text-align: center;
+}
+.result h2:nth-of-type(1){
+  color: var(--grey);
+  font-size: 1.3rem;
+  font-weight: var(--fw-500);
+}
+.result h2:nth-of-type(2){
+  font-weight: var(--fw-500);
+}
+.result p{
+  color: var(--grey);
+  font-size: 1rem;
+}
+.circle{
+  border-radius: 50%;
+  min-width: 160px;
+  min-height: 160px;
+  background: linear-gradient(to bottom, hsl(241, 56%, 51%), hsl(241, 81%, 59%));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.circle h3{
+  font-size: 3.5rem;
+  color: var(--white);
+}
+.circle p{
+    color: var(--grey);
+    font-weight: var(--fw-700);
+    font-size: .8rem;
+}
+/* ===== Result End ===== */
+
+
+/* ===== summary ===== */
+
+.summary{
+    flex: 1 1 0;
+    max-width: 300px;
+    height: auto;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+.summary h2{
+  font-size: 1.3rem;
+  font-weight: var(--fw-700);
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.list li{
+  display: flex;
+  gap: 3.125rem;
+  border-radius: 7px;
+  padding: .8rem;
+  justify-content: space-between;
+}
+
+.number{
+  display: flex;
+}
+
+.subtitle{
+  display: flex;
+  gap: .625rem;
+  align-items: center;
+}
+
+/* Color of background ' LI ' */
+
+ul li:nth-child(1){
+  background-color: hsla(0, 78%, 79%, 0.096)
+}
+ul li:nth-child(2){
+ background-color:  hsla(39, 100%, 56%, 0.096);;
+}
+ul li:nth-child(3){
+  background-color: hsl(166, 100%, 37%, 0.096);
+}
+ul li:nth-child(4){
+  background-color: hsl(234, 85%, 45%, 0.096);
+}
+
+/* Color Of paragraf subtitle  */
+
+.reaction p{
+  font-size: 0.938rem;
+  color: var(--clr-lred);
+}
+.memory p{
+  font-size: 0.938rem;
+  color: var(--clr-oyell);
+}
+.verbal p{
+  font-size: 0.938rem;
+  color: var(--clr-gteal);
+}
+.visual p{
+  font-size: 0.938rem;
+  color: var(--clr-cblue);
+}
+
+/* Percentage */
+
+.number p:nth-child(1){
+  font-size: 0.938rem;
+  color: var(--darkblue);
+  margin: 0 .5rem;
+  font-weight: var(--fw-800)
+}
+.number p:nth-child(2){
+  font-size: 0.938rem;
+  color: #999191;
+  font-weight: var(--fw-700)
+  
+}
+
+/* Button */
+button{
+  color: var(--white);
+  background-color: var(--darkblue);
+  padding: 0.938rem;
+  border-radius: 50px;
+  margin-bottom: .625rem;
+  border: none;
+  cursor: pointer;
+}
+button:hover{
+  background: linear-gradient(to bottom, hsl(241, 56%, 51%), hsl(241, 81%, 59%));
+}
+
+/* ===== summary end===== */
